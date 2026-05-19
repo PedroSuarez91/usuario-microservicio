@@ -1,12 +1,12 @@
-package ecoMarket.usuario_microservicio.Service;
+package ecoMarket.usuario_microservicio.service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import ecoMarket.usuario_microservicio.Repository.UsuarioRepository;
 import ecoMarket.usuario_microservicio.model.Usuario;
+import ecoMarket.usuario_microservicio.repository.UsuarioRepository;
 import jakarta.transaction.Transactional;
 
 @Service
