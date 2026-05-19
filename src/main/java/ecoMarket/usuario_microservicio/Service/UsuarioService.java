@@ -29,8 +29,12 @@ public class UsuarioService {
         if (existente!=null){
             existente.setNombre(usuario.getNombre());
             existente.setEmail(usuario.getEmail());
-            existente.setClave(usuario.getClave());
+            existente.setTelefono(usuario.getTelefono());
+            existente.setDireccion(usuario.getDireccion());
+            existente.setPassword(usuario.getPassword());
             return usuarioRepository.save(existente);
+            
+
             
         }
         return null;

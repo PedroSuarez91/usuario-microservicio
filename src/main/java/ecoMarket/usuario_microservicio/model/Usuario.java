@@ -26,10 +26,19 @@ public class Usuario {
     private String nombre;
 
     @Column(nullable=false)
+    private String username;
+
+    @Column(nullable=false)
+    private String password;
+
+    @Column(nullable=false)
     private String email;
 
     @Column(nullable=false)
-    private String clave;
+    private String telefono;
+
+    @Column(nullable=false)
+    private String direccion;
 
     @Column(nullable=false)
     private Boolean activo;
