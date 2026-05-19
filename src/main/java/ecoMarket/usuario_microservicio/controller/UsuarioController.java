@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import ecoMarket.usuario_microservicio.Service.UsuarioService;
 import ecoMarket.usuario_microservicio.model.Usuario;
+import ecoMarket.usuario_microservicio.service.UsuarioService;
 
 @RestController
 @RequestMapping("api/v1/usuarios")
