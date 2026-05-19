@@ -22,13 +22,16 @@ public class Usuario {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "nombre")
+    @Column(nullable=false)
     private String nombre;
-    @Column(name = "email")
+
+    @Column(nullable=false)
     private String email;
-    @Column(name = "clave")
+
+    @Column(nullable=false)
     private String clave;
-    @Column(name = "activo")
+
+    @Column(nullable=false)
     private Boolean activo;
 
 }
