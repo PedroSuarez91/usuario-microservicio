@@ -5,6 +5,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.PrePersist;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -41,6 +42,12 @@ public class Usuario {
     private String direccion;
 
     @Column(nullable=false)
-    private Boolean activo;
+    private Boolean activo = true;
 
+    @PrePersist
+    public void prePersist() {
+        if (activo == null) {
+            activo = true;
+        }
+    }
 }

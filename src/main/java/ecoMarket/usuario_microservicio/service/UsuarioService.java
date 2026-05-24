@@ -16,9 +16,12 @@ public class UsuarioService {
     private UsuarioRepository usuarioRepository;
 
     public Usuario crear(Usuario usuario) {
-        return usuarioRepository.save(usuario);
-        
+    if (usuario.getActivo() == null) {
+        usuario.setActivo(true);
     }
+
+    return usuarioRepository.save(usuario);
+}
 
     public List<Usuario> listar() {
         return usuarioRepository.findAll();
@@ -43,5 +46,17 @@ public class UsuarioService {
     public void eliminar(Long id) {
         usuarioRepository.deleteById(id);
        
+    }
+
+    public Usuario desactivar(Long id) {
+
+    Usuario usuario = usuarioRepository.findById(id).orElse(null);
+
+    if (usuario != null) {
+        usuario.setActivo(false);
+        return usuarioRepository.save(usuario);
+    }
+
+    return null;
     }
 }

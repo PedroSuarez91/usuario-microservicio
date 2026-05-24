@@ -2,6 +2,9 @@ package ecoMarket.usuario_microservicio.controller;
 
 import java.util.List;
 
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -41,4 +44,15 @@ public class UsuarioController {
         usuarioService.eliminar(id);
     }
 
+    @PatchMapping("{id}/desactivar")
+    public ResponseEntity<Usuario> desactivarUsuario(@PathVariable Long id) {
+
+    Usuario usuarioDesactivado = usuarioService.desactivar(id);
+
+    if (usuarioDesactivado != null) {
+        return new ResponseEntity<>(usuarioDesactivado, HttpStatus.OK);
+    }
+
+    return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+    }
 }
