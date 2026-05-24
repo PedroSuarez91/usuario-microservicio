@@ -1,6 +1,19 @@
 # Crear Usuario
 POST http://localhost:8089/api/v1/usuarios
 
+json
+{
+  "nombre": "Pedro Suarez",
+  "username": "pedro123",
+  "password": "123456",
+  "email": "pedro@gmail.com",
+  "telefono": "987654321",
+  "direccion": "Concepción"
+}
+
+# Desactivar usuario
+http://localhost:8081/api/v1/usuarios/"IDUSUARIO"/desactivar
+
 # aplication.properties
 
 spring.application.name=usuario-microservicio
