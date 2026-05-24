@@ -1,4 +1,4 @@
-package ecoMarket.usuario_microservicio.repository;
+package ecoMarket.usuario_microservicio.Repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
