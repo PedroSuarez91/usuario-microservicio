@@ -13,7 +13,7 @@ json
 }
 
 # Desactivar usuario
-http://localhost:8081/api/v1/usuarios/"IDUSUARIO"/desactivar
+PATCH http://localhost:8081/api/v1/usuarios/"IDUSUARIO"/desactivar
 
 # aplication.properties
 
