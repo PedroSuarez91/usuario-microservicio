@@ -60,4 +60,16 @@ public class UsuarioService {
         return null;
 
     }
+
+    public Usuario desactivar(Long id) {
+
+        Usuario usuario = usuarioRepository.findById(id).orElse(null);
+
+        if (usuario != null) {
+            usuario.setActivo(false);
+            return usuarioRepository.save(usuario);
+        }
+
+        return null;
+    }
 }
