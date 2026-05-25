@@ -5,7 +5,6 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.PrePersist;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -18,36 +17,32 @@ import lombok.NoArgsConstructor;
 @Table(name = "usuarios")
 
 public class Usuario {
-    
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable=false)
+    @Column(nullable = false)
     private String nombre;
 
-    @Column(nullable=false)
+    @Column(nullable = false)
     private String username;
 
-    @Column(nullable=false)
+    @Column(nullable = false)
     private String password;
 
-    @Column(nullable=false)
+    @Column(nullable = false)
     private String email;
 
-    @Column(nullable=false)
+    @Column(nullable = false)
     private String telefono;
 
-    @Column(nullable=false)
+    @Column(nullable = false)
     private String direccion;
 
-    @Column(nullable=false)
-    private Boolean activo = true;
+    @Column(nullable = false)
+    private Boolean activo;
 
-    @PrePersist
-    public void prePersist() {
-        if (activo == null) {
-            activo = true;
-        }
-    }
+    @Column(nullable = true)
+    private Long idCarro;
 }
