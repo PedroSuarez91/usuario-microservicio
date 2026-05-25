@@ -4,12 +4,14 @@ POST http://localhost:8081/api/v1/usuarios
 json
 
 {
-"nombre": "Pedro Suarez",
-"username": "pedro123",
-"password": "123456",
-"email": "pedro@gmail.com",
-"telefono": "987654321",
-"direccion": "Concepción"
+  "nombre": "Pedro Suarez",
+  "username": "psuarez",
+  "password": "123456",
+  "email": "pedro.suarez@gmail.com",
+  "telefono": "+56912345678",
+  "direccion": "Concepcion, Chile",
+  "activo": true,
+  "idCarro": null
 }
 
 # Desactivar usuario
