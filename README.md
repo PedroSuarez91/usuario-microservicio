@@ -1,8 +1,6 @@
 # Crear Usuario
 POST http://localhost:8081/api/v1/usuarios
 
-json
-
 {
   "nombre": "Pedro Suarez",
   "username": "psuarez",
