@@ -15,6 +15,9 @@ POST http://localhost:8081/api/v1/usuarios
 # Desactivar usuario
 PATCH http://localhost:8081/api/v1/usuarios/"IDUSUARIO"/desactivar
 
+# Asignar carro de compra al usuario
+PUT http://localhost:8081/api/v1/"IDUSUARIO"/carro/"IDCARRO"
+
 # aplication.properties
 
 spring.application.name=usuario-microservicio
